@@ -148,19 +148,23 @@ const CustomizableTripPage = () => {
       {/* Header */}
       <header className="bg-pink-200 shadow-md">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
-          {/* Logo */}
-          <div className="flex items-center space-x-4 cursor-pointer" onClick={handleHomeNavigation}>
-            <img src={logo} alt="Logo" className="w-20 h-20" />
-            <img src={slogan} alt="Slogan" className="h-10" />
-          </div>
-          {/* Navigation Bar */}
-          <nav className="space-x-6">
-            <a href="/" className="text-gray-600 hover:text-gray-800">Home</a>
-            <a href="/trips" className="text-gray-600 hover:text-gray-800">Trips</a>
-            <a href="/contact" className="text-gray-600 hover:text-gray-800">Contact</a>
-          </nav>
+        {/* Logo */}
+        <div className="flex items-center space-x-4 cursor-pointer" onClick={handleHomeNavigation}>
+        <img src={logo} alt="Logo" className="w-40 h-40" />
+        <img src={slogan} alt="Slogan" className="h-20" />
         </div>
-      </header>
+        {/* Updated Navigation Bar */}
+        <nav className="space-x-6">
+          <a href="/" className="text-gray-600 hover:text-gray-800 text-lg">Home</a>
+          <a href="/single-services" className="text-gray-600 hover:text-gray-800 text-lg">Single Services</a>
+            <a href="/customizable-trip" className="text-gray-600 hover:text-gray-800 text-lg">Customize Trip</a>
+            <a href="/public-transport" className="text-gray-600 hover:text-gray-800 text-lg">Public Transportation</a>
+            <a href="/trips" className="text-gray-600 hover:text-gray-800 text-lg">Trips</a>
+            <a href="/contact" className="text-gray-600 hover:text-gray-800 text-lg">Contact</a>
+        </nav>
+      </div>
+    </header>
+
 
       {/* Main Content */}
       <main className="flex-grow p-6">

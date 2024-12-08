@@ -39,10 +39,14 @@ const HomePage = () => {
         {/* Navigation Bar (Top Right) */}
         <nav className="space-x-6">
           <a href="/" className="text-white hover:text-gray-300">Home</a>
+          <a href="/single-services" className="text-white hover:text-gray-300">Single Services</a>
+          <a href="/customizable-trip" className="text-white hover:text-gray-300 ">Customize Trip</a> 
+          <a href="/public-transport" className="text-white hover:text-gray-300">Public Transportation</a>
           <a href="/trips" className="text-white hover:text-gray-300">Trips</a>
           <a href="/contact" className="text-white hover:text-gray-300">Contact</a>
         </nav>
       </div>
+      
       
       {/* Headline Section (Centered) */}
       <div className="absolute bottom-16 inset-x-0 text-center px-6">

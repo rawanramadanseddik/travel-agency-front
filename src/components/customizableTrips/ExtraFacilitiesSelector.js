@@ -1,3 +1,5 @@
+import React from 'react';
+
 const ExtraFacilitiesSelector = ({ tripDetails, setTripDetails }) => {
     const handleFacilitiesChange = (e) => {
       const selectedFacilities = [...tripDetails.facilities];

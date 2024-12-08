@@ -1,3 +1,5 @@
+import React from 'react';
+
 const TripSummary = ({ tripDetails }) => {
     const calculateTotalPrice = () => {
       if (!tripDetails) return 0; // Guard against undefined tripDetails
