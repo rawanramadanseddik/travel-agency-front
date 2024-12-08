@@ -1,4 +1,3 @@
-// src/UI/Card/CardActions.js
 import React from 'react';
 
 function CardActions({ children }) {

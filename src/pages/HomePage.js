@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import logo from '../images/logoo.svg';
 import slogan from '../images/slog.svg';
 import luxorImg from '../images/luxor.jpg';
@@ -14,10 +15,13 @@ const locations = [
 
 const HomePage = () => {
   const [selectedLocation, setSelectedLocation] = useState(null);
-
+  const navigate = useNavigate();
   const handleLocationClick = (location) => {
     setSelectedLocation(location);
   };
+  const handleAllInOneTrip = (location) => {
+    navigate('/all-in-one-trip', { state: { selectedLocation: location.name } });
+};
 
   return (
     <div className="bg-gray-100 min-h-screen flex flex-col">
@@ -102,6 +106,12 @@ const HomePage = () => {
               <button className="w-full py-3 text-lg text-white bg-yellow-500 rounded-lg hover:bg-yellow-600 transition">
                 Customize my own trip
               </button>
+              <button
+        className="w-full py-3 text-lg text-white bg-green-500 rounded-lg hover:bg-green-600 transition"
+        onClick={() => handleAllInOneTrip(selectedLocation)}
+    >
+        All-in-One Trip
+    </button>
             </div>
           </div>
         </section>
