@@ -1,4 +1,3 @@
-// src/UI/Card/CardHeader.js
 import React from 'react';
 
 function CardHeader({ children }) {

@@ -1,4 +1,3 @@
-// src/UI/Card/CardBody.js
 import React from 'react';
 
 function CardBody({ children }) {
