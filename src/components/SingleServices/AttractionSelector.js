@@ -33,7 +33,7 @@ const AttractionSelector = () => {
       {/* Where are you going? */}
       <div className="bg-white p-4 rounded-lg shadow-md">
         <div className="flex items-center gap-2">
-          <FaMapMarkerAlt className="text-xl text-gray-500" />
+          <FaMapMarkerAlt className="text-xl text-pink-500" />
           <label className="text-lg font-semibold">Where are you going?</label>
         </div>
         <input
@@ -53,7 +53,7 @@ const AttractionSelector = () => {
       {/* Start and End Date */}
       <div className="bg-white p-4 rounded-lg shadow-md">
         <div className="flex items-center gap-2">
-          <FaCalendarAlt className="text-xl text-gray-500" />
+          <FaCalendarAlt className="text-xl text-pink-500" />
           <label className="text-lg font-semibold">Start and End Date</label>
         </div>
         <div className="flex gap-4 mt-2">

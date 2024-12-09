@@ -32,7 +32,7 @@ const AirportTransportSelector = () => {
       {/* Pick-up Location */}
       <div className="bg-white p-4 rounded-lg shadow-md">
         <div className="flex items-center gap-2">
-          <FaMapMarkerAlt className="text-xl text-gray-500" />
+          <FaMapMarkerAlt className="text-xl text-pink-500" />
           <label className="text-lg font-semibold">Pick-up Location</label>
         </div>
         <input
@@ -52,7 +52,7 @@ const AirportTransportSelector = () => {
       {/* Destination */}
       <div className="bg-white p-4 rounded-lg shadow-md">
         <div className="flex items-center gap-2">
-          <FaMapMarkerAlt className="text-xl text-gray-500" />
+          <FaMapMarkerAlt className="text-xl text-pink-500" />
           <label className="text-lg font-semibold">Destination</label>
         </div>
         <input
@@ -72,7 +72,7 @@ const AirportTransportSelector = () => {
       {/* Date and Time */}
       <div className="bg-white p-4 rounded-lg shadow-md">
         <div className="flex items-center gap-2">
-          <FaCalendarAlt className="text-xl text-gray-500" />
+          <FaCalendarAlt className="text-xl text-pink-500" />
           <label className="text-lg font-semibold">Date and Time</label>
         </div>
         <input
@@ -91,7 +91,7 @@ const AirportTransportSelector = () => {
       {/* Number of People */}
       <div className="bg-white p-4 rounded-lg shadow-md">
         <div className="flex items-center gap-2">
-          <FaUsers className="text-xl text-gray-500" />
+          <FaUsers className="text-xl text-pink-500" />
           <label className="text-lg font-semibold">Number of People</label>
         </div>
         <input

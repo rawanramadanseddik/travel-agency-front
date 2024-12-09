@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { FaHotel, FaCar, FaTaxi, FaMapMarkerAlt, FaBed, FaCalendarAlt, FaUsers, FaCarAlt } from 'react-icons/fa';
+
 const StaySelector = () => {
     const [selectedOption, setSelectedOption] = useState(''); 
     const [serviceDetails, setServiceDetails] = useState({
@@ -39,7 +40,7 @@ const StaySelector = () => {
             {/* Stays Content */}
             <div className="bg-white p-4 rounded-lg shadow-md">
               <div className="flex items-center gap-2">
-                <FaBed className="text-xl text-gray-500" />
+                <FaBed className="text-xl text-pink-500" />
                 <label className="text-lg font-semibold">Where are you going?</label>
               </div>
               <input
@@ -54,7 +55,7 @@ const StaySelector = () => {
             {/* Check-in and Check-out Date */}
             <div className="bg-white p-4 rounded-lg shadow-md">
               <div className="flex items-center gap-2">
-                <FaCalendarAlt className="text-xl text-gray-500" />
+                <FaCalendarAlt className="text-xl text-pink-500" />
                 <label className="text-lg font-semibold">Check-in Date and Check-out Date</label>
               </div>
               <div className="flex gap-4 mt-2">
@@ -76,7 +77,7 @@ const StaySelector = () => {
             {/* Adults, Children, Rooms, and Pets */}
             <div className="bg-white p-4 rounded-lg shadow-md">
               <div className="flex items-center gap-2">
-                <FaUsers className="text-xl text-gray-500" />
+                <FaUsers className="text-xl text-pink-500" />
                 <label className="text-lg font-semibold">Adults, Children, Rooms</label>
               </div>
               <div className="flex gap-4 mt-2">

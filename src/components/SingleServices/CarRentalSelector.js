@@ -33,7 +33,7 @@ const CarRentalSelector = () => {
           {/* Pick-up Location */}
           <div className="bg-white p-4 rounded-lg shadow-md">
             <div className="flex items-center gap-2">
-              <FaMapMarkerAlt className="text-xl text-gray-500" />
+              <FaMapMarkerAlt className="text-xl text-pink-500" />
               <label className="text-lg font-semibold">Pick-up Location</label>
             </div>
             <input
@@ -51,7 +51,7 @@ const CarRentalSelector = () => {
           {/* Pick-up Date and Time */}
           <div className="bg-white p-4 rounded-lg shadow-md">
             <div className="flex items-center gap-2">
-              <FaCalendarAlt className="text-xl text-gray-500" />
+              <FaCalendarAlt className="text-xl text-pink-500" />
               <label className="text-lg font-semibold">Pick-up Date and Time</label>
             </div>
             <input
@@ -68,7 +68,7 @@ const CarRentalSelector = () => {
           {/* Drop-off Date and Time */}
           <div className="bg-white p-4 rounded-lg shadow-md">
             <div className="flex items-center gap-2">
-              <FaCalendarAlt className="text-xl text-gray-500" />
+              <FaCalendarAlt className="text-xl text-pink-500" />
               <label className="text-lg font-semibold">Drop-off Date and Time</label>
             </div>
             <input
@@ -85,7 +85,7 @@ const CarRentalSelector = () => {
           {/* Car Type and Name */}
           <div className="bg-white p-4 rounded-lg shadow-md">
             <div className="flex items-center gap-2">
-              <FaCarAlt className="text-xl text-gray-500" />
+              <FaCarAlt className="text-xl text-pink-500" />
               <label className="text-lg font-semibold">Car Type and Name</label>
             </div>
             <input

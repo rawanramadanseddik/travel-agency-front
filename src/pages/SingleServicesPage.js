@@ -10,6 +10,8 @@ import meccaImg from '../images/mecca.jpg';
 import cairoImg from '../images/cairo.jpg';
 import parisImg from '../images/paris.jpg';
 import dubaiImg from '../images/dubai.jpg';
+import travelAgencyImg from '../images/travel4.jpg';
+
 
 
 
@@ -89,7 +91,7 @@ const SingleServicesPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div className="min-h-screen bg-white-100">
       <header className="bg-pink-200 shadow-md">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
           {/* Logo */}
@@ -117,6 +119,10 @@ const SingleServicesPage = () => {
 
           Single Services 
         </h1>
+        {/* Travel Agency Image */}
+<div className="w-full mb-6">
+  <img src={travelAgencyImg} alt="Travel Agency" className="w-full h-auto rounded-lg shadow-md" />
+</div>
 
         {/* Service Selection Buttons */}
         <div className="flex flex-wrap justify-center gap-4 mb-6">
