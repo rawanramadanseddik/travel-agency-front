@@ -1,5 +1,11 @@
 import React, { useState } from "react";
+import logo from '../images/logoo.svg';
+import slogan from '../images/slog.svg';
+import backgroundImage from '../images/background.jpg';
 
+const handleHomeNavigation = () => {
+  window.location.href = '/'; // Navigate to the home page
+};
 
 
 const FeedbackForm = () => {
@@ -22,7 +28,7 @@ const FeedbackForm = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
+    <div className="min-h-screen flex items-center justify-center bg-gray-100" style={{ backgroundImage: `url(${backgroundImage})` }}>
       <div className="w-full max-w-md bg-white shadow-md rounded px-8 py-6">
         <h2 className="text-2xl font-semibold text-center text-gray-800 mb-6">Feedback Form</h2>
         <form onSubmit={handleSubmit}>
