@@ -1,5 +1,11 @@
 import React, { useState } from "react";
+import logo from '../images/logoo.svg';
+import slogan from '../images/slog.svg';
+import backgroundImage from '../images/background.jpg';
 
+const handleHomeNavigation = () => {
+  window.location.href = '/'; // Navigate to the home page
+};
 const HistoryPage = () => {
   const [bookings, setBookings] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -35,7 +41,31 @@ const HistoryPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 py-10">
+    <div className="min-h-screen bg-gray-100 py-10" style={{ backgroundImage: `url(${backgroundImage})` }}>
+    <header className="shadow-md bg-cover bg-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+        {/* Logo */}
+        <div
+          className="flex items-center space-x-4 cursor-pointer"
+          onClick={handleHomeNavigation}
+        >
+          <img src={logo} alt="Logo" className="w-40 h-40" />
+          <img src={slogan} alt="Slogan" className="h-20" />
+        </div>
+        {/* Navigation Bar */}
+        <nav className="space-x-6">
+          <a href="/" className="text-white hover:text-gray-200 text-lg">
+            Home
+          </a>
+          <a href="/contactus" className="text-white hover:text-gray-200 text-lg">
+            Contact Us
+          </a>
+          <a href="/aboutus" className="text-white hover:text-gray-200 text-lg">
+            About Us
+          </a>
+        </nav>
+      </div>
+    </header>
       <div className="max-w-4xl mx-auto bg-white p-6 rounded-lg shadow-md">
         <h2 className="text-2xl font-semibold text-gray-800 mb-6">Booking History</h2>
         <form onSubmit={handleSubmit} className="mb-6">
