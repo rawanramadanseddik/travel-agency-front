@@ -4,9 +4,9 @@ import { FaCar, FaBed, FaSuitcase, FaHeadset } from 'react-icons/fa'; // Importi
 
 const AboutUs = () => {
   return (
-    <div className="bg-gray-100 min-h-screen">
+    <div className="bg-gray-100 min-h-screen w-full">
       {/* About Us Content Container */}
-      <div className="w-full bg-white shadow-md p-6 flex flex-col md:flex-row items-center max-w-7xl mx-auto">
+      <div className="w-full bg-white shadow-md p-6 flex flex-col md:flex-row items-center">
         
         {/* Image on the left (only for the About Us section) */}
         <div className="w-full md:w-1/3 mb-6 md:mb-0">
@@ -29,8 +29,8 @@ const AboutUs = () => {
       </div>
 
       {/* Why Choose Us Section (starts full width) */}
-      <div className="w-full bg-white shadow-md p-6 max-w-7xl mx-auto">
-        <h2 className="text-xl font-semibold mb-4 text-pink-500">Why Choose Us?</h2>
+      <div className="w-full bg-white shadow-md p-6">
+        <h2 className="text-xl font-semibold mb-4 text-pink-500 text-center">Why Choose Us?</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
           <div className="flex flex-col items-center">
             <FaSuitcase className="text-3xl text-pink-500 mb-2" />
@@ -50,8 +50,6 @@ const AboutUs = () => {
           </div>
         </div>
       </div>
-
-     
     </div>
   );
 };

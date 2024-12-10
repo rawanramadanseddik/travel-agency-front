@@ -61,6 +61,7 @@ const HomePage = () => {
               <a href="/signup" className="text-white hover:text-gray-300">Sign Up</a>
               <a href="/contactus" className="text-white hover:text-gray-300">Contact Us</a>
               <a href="/aboutus" className="text-white hover:text-gray-300">About Us</a>
+              <a href="/weather" className="text-white hover:text-gray-300">Weather</a>
             </nav>
           </div>
 
@@ -141,14 +142,22 @@ const HomePage = () => {
         </section>
       )}
 
-      {/* Feedback Button */}
-      <section className="bg-gray-100 py-6">
+{/* Buttons Section (Feedback + Public Transportation) */}
+<section className="bg-gray-100 py-6">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <button
-            className="px-8 py-3 bg-blue-600 text-white rounded-lg text-lg hover:bg-blue-700 transition duration-200"
-          >
-            Give Feedback
-          </button>
+          <div className="flex justify-center space-x-4">
+            <button
+              className="px-8 py-3 bg-blue-600 text-white rounded-lg text-lg hover:bg-blue-700 transition duration-200"
+            >
+              Give Feedback
+            </button>
+            <button
+              onClick={() => handleButtonClick('/public-transport')}
+              className="px-8 py-3 bg-yellow-600 text-white rounded-lg text-lg hover:bg-yellow-700 transition duration-200"
+            >
+              Public Transportation
+            </button>
+          </div>
         </div>
       </section>
     </div>
