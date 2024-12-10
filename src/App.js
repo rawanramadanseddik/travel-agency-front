@@ -6,6 +6,7 @@ import AvailableTripsPage from './pages/AllInOneTripsPage';
 import CustomizeTripPage from './pages/CustomizableTripPage';
 import BookingFormPage from './pages/BookingFormPage';
 import BookAllInOnePage from './pages/BookAllInOnePage';
+import FeedbackPage from './pages/FeedbackPage';
 import AboutUsPage from './pages/AboutUsPage';
 import ContactUsPage from './pages/ContactUsPage';
 import logo from './images/logoo.svg';
@@ -32,6 +33,7 @@ const App = () => (
           <Route path="/public-transport" element={<PublicTransportPage />} />
           <Route path="/bookingform" element={<BookingFormPage />} />
           <Route path="/bookallinone" element={<BookAllInOnePage />} />
+          <Route path="/feedback" element={<FeedbackPage />} />
           <Route path="/aboutus" element={<AboutUsPage />} />
           <Route path="/contactus" element={<ContactUsPage />} />
         </Routes>

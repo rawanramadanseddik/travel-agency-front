@@ -145,6 +145,7 @@ const HomePage = () => {
       <section className="bg-gray-100 py-6">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <button
+            onClick={() => handleButtonClick('/feedback')}
             className="px-8 py-3 bg-blue-600 text-white rounded-lg text-lg hover:bg-blue-700 transition duration-200"
           >
             Give Feedback
