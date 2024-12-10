@@ -142,22 +142,14 @@ const HomePage = () => {
         </section>
       )}
 
-{/* Buttons Section (Feedback + Public Transportation) */}
-<section className="bg-gray-100 py-6">
+      {/* Feedback Button */}
+      <section className="bg-gray-100 py-6">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="flex justify-center space-x-4">
-            <button
-              className="px-8 py-3 bg-blue-600 text-white rounded-lg text-lg hover:bg-blue-700 transition duration-200"
-            >
-              Give Feedback
-            </button>
-            <button
-              onClick={() => handleButtonClick('/public-transport')}
-              className="px-8 py-3 bg-yellow-600 text-white rounded-lg text-lg hover:bg-yellow-700 transition duration-200"
-            >
-              Public Transportation
-            </button>
-          </div>
+          <button
+            className="px-8 py-3 bg-blue-600 text-white rounded-lg text-lg hover:bg-blue-700 transition duration-200"
+          >
+            Give Feedback
+          </button>
         </div>
       </section>
     </div>

@@ -4,19 +4,18 @@ import { useNavigate } from "react-router-dom"; // Use useNavigate instead of us
 import logo from '../images/logoo.svg';
 import slogan from '../images/slog.svg';
 import backgroundImage from '../images/background.jpg';
-import { useLocation } from "react-router-dom"; // Add this import
 
 const handleHomeNavigation = () => {
   window.location.href = '/'; // Navigate to the home page
 };
 
 const AllInOneTrips = () => {
-    const location = useLocation();
+  
   const [trips, setTrips] = useState([]);
   const [filteredTrips, setFilteredTrips] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const selectedLocationFromHome = location.state?.selectedLocation || "";
+  
   const [selectedLocation, setSelectedLocation] = useState('');
   const [selectedPriceRange, setSelectedPriceRange] = useState('');
   const [sortBy, setSortBy] = useState('');

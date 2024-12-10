@@ -6,13 +6,14 @@ import AvailableTripsPage from './pages/AllInOneTripsPage';
 import CustomizeTripPage from './pages/CustomizableTripPage';
 import BookingFormPage from './pages/BookingFormPage';
 import BookAllInOnePage from './pages/BookAllInOnePage';
+import FeedbackPage from './pages/FeedbackPage';
 import AboutUsPage from './pages/AboutUsPage';
 import ContactUsPage from './pages/ContactUsPage';
 import SignUp from './pages/SignUp';
 import logo from './images/logoo.svg';
 import slogan from './images/slog.svg';
 import PublicTransportPage from './pages/PublicTransportPage';
-import WeatherPage from './pages/WeatherPage'; 
+
 const handleHomeNavigation = () => {
   window.location.href = '/'; // Navigate to the home page
 };
@@ -34,9 +35,9 @@ const App = () => (
           <Route path="/public-transport" element={<PublicTransportPage />} />
           <Route path="/bookingform" element={<BookingFormPage />} />
           <Route path="/bookallinone" element={<BookAllInOnePage />} />
+          <Route path="/feedback" element={<FeedbackPage />} />
           <Route path="/aboutus" element={<AboutUsPage />} />
           <Route path="/contactus" element={<ContactUsPage />} />
-          <Route path="/weather" element={<WeatherPage />} />
         </Routes>
       </div>
 
@@ -61,7 +62,7 @@ const App = () => (
       </footer>
       <footer className="bg-gray-200 p-4 text-center">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p>&copy; 2024 Your Company. All rights reserved.</p>
+          <p>&copy; 2024 Roamology Sparrow.   All rights reserved.</p>
         </div>
       </footer>
     </div>
@@ -69,3 +70,16 @@ const App = () => (
 );
 
 export default App;
+
+// import React from "react";
+// import AdminPage from "./pages/AdminPage";
+
+// const App = () => {
+//   return (
+//     <div>
+//       <AdminPage />
+//     </div>
+//   );
+// };
+
+// export default App;
