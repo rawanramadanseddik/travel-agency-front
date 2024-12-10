@@ -143,12 +143,18 @@ const HomePage = () => {
 
       {/* Feedback Button */}
       <section className="bg-gray-100 py-6">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-x-4">
           <button
             onClick={() => handleButtonClick('/feedback')}
             className="px-8 py-3 bg-blue-600 text-white rounded-lg text-lg hover:bg-blue-700 transition duration-200"
           >
             Give Feedback
+          </button>
+          <button
+            onClick={() => handleButtonClick('/history')}
+            className="px-5 py-3 bg-blue-600 text-white rounded-lg text-lg hover:bg-blue-700 transition duration-200"
+          >
+            View Booking History
           </button>
         </div>
       </section>
