@@ -12,6 +12,7 @@ import ContactUsPage from './pages/ContactUsPage';
 import logo from './images/logoo.svg';
 import slogan from './images/slog.svg';
 import PublicTransportPage from './pages/PublicTransportPage';
+import HistoryPage from './pages/HistoryPage';
 
 const handleHomeNavigation = () => {
   window.location.href = '/'; // Navigate to the home page
@@ -36,6 +37,7 @@ const App = () => (
           <Route path="/feedback" element={<FeedbackPage />} />
           <Route path="/aboutus" element={<AboutUsPage />} />
           <Route path="/contactus" element={<ContactUsPage />} />
+          <Route path="/history" element={<HistoryPage />} />
         </Routes>
       </div>
 
@@ -60,7 +62,7 @@ const App = () => (
       </footer>
       <footer className="bg-gray-200 p-4 text-center">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p>&copy; 2024 Your Company. All rights reserved.</p>
+          <p>&copy; 2024 Roamology Sparrow.   All rights reserved.</p>
         </div>
       </footer>
     </div>
