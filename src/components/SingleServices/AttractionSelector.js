@@ -1,31 +1,40 @@
 import React, { useState } from 'react';
 import { FaHotel, FaCar, FaTaxi, FaMapMarkerAlt, FaBed, FaCalendarAlt, FaUsers, FaCarAlt } from 'react-icons/fa';
+import axios from 'axios';
+
 const AttractionSelector = () => {
-    const [selectedOption, setSelectedOption] = useState(''); 
     const [serviceDetails, setServiceDetails] = useState({
-      stay: {
-        destination: '',
-        checkInDate: '',
-        checkOutDate: '',
-        adults: 2,
-        children: 0,
-        rooms: 1,
-        pets: false,
-      },
+     
       attraction: { destination: '', startDate: '', endDate: '' },
-      carRental: {
-          pickUpLocation: '',
-          pickUpDateTime: '',
-          dropOffDateTime: '',
-          carType: '',
-        },
-      airportTransport: {
-          pickUpLocation: '',
-          destination: '',
-          dateTime: '',
-          numberOfPeople: 1,
-        },
+      
+      
     });
+    const [searchResults, setSearchResults] = useState([]);
+    const [error, setError] = useState('');
+
+    const handleSearch = async () => {
+      const { destination, startDate, endDate } = serviceDetails.attraction;
+      const backendUrl = process.env.REACT_APP_BACKEND_URL || 'http://localhost:5000';
+      
+      try {
+        const response = await axios.post(`${backendUrl}/api/singleservices/attractions`, {
+          location: destination,
+          dates: [startDate, endDate], // You may want to send a date range here
+        });
+    
+        if (response.data && Array.isArray(response.data)) {
+          setSearchResults(response.data);
+          setError('');
+        } else {
+          setSearchResults([]);
+          setError('No attractions found.');
+        }
+      } catch (err) {
+        console.error(err);
+        setError('Error fetching attractions. Please try again.');
+      }
+    };
+    
   
   return (
     <div>
@@ -100,7 +109,41 @@ const AttractionSelector = () => {
           </div>
         </div>
       </div>
+    
+    {/* Search Button */}
+<div className="flex justify-center mt-4 w-full">
+  <button
+    onClick={handleSearch}
+    className="bg-pink-500 text-white font-bold px-4 py-2 rounded-lg hover:bg-pink-600 w-full"
+  >
+    Search Attractions
+  </button>
+</div>
+  {/* Search Results */}
+  {searchResults.length > 0 ? (
+    <div className="mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      {searchResults.map((attraction) => (
+        <div key={attraction._id} className="bg-white p-4 rounded-lg shadow-md">
+          <h3 className="text-lg font-semibold">{attraction.name}</h3>
+          <p className="text-gray-600">Location: {attraction.location}</p>
+          <p className="text-gray-600">Price: ${attraction.price}</p>
+          <p className="text-gray-600">
+            Available: {new Date(attraction.availableDates[0]).toLocaleDateString()} to{' '}
+            {new Date(attraction.availableDates[attraction.availableDates.length - 1]).toLocaleDateString()}
+          </p>
+          <button
+            onClick={() => alert(`Booking ${attraction.name}`)}
+            className="mt-4 bg-pink-500 text-white font-bold px-4 py-2 rounded-lg hover:bg-pink-600 w-full"
+          >
+            Book Now
+          </button>
+        </div>
+      ))}
     </div>
+  ) : (
+    <p className="text-gray-600 mt-4">{error || 'No attractions found.'}</p>
+  )}
+</div>
   );
 
     };
