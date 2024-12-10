@@ -6,6 +6,7 @@ import AvailableTripsPage from './pages/AllInOneTripsPage';
 import CustomizeTripPage from './pages/CustomizableTripPage';
 import BookingFormPage from './pages/BookingFormPage';
 import BookAllInOnePage from './pages/BookAllInOnePage';
+import FeedbackPage from './pages/FeedbackPage';
 import logo from './images/logoo.svg';
 import slogan from './images/slog.svg';
 
@@ -28,6 +29,7 @@ const App = () => (
           <Route path="/customize-trip" element={<CustomizeTripPage />} />
           <Route path="/bookingform" element={<BookingFormPage />} />
           <Route path="/bookallinone" element={<BookAllInOnePage />} />
+          <Route path="/feedback" element={<FeedbackPage />} />
         </Routes>
       </div>
 
