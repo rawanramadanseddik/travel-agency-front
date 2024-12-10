@@ -50,11 +50,9 @@ const PublicTransportPage = () => {
           {/* Navigation Bar */}
           <nav className="space-x-6">
             <a href="/" className="text-gray-600 hover:text-gray-800 text-lg">Home</a>
-            <a href="/single-services" className="text-gray-600 hover:text-gray-800 text-lg">Single Services</a>
-            <a href="/customizable-trip" className="text-gray-600 hover:text-gray-800 text-lg">Customize Trip</a>
-            <a href="/transportation" className="text-gray-600 hover:text-gray-800 text-lg">Public Transportation</a>
-            <a href="/trips" className="text-gray-600 hover:text-gray-800 text-lg">Trips</a>
-            <a href="/contact" className="text-gray-600 hover:text-gray-800 text-lg">Contact</a>
+            <a href="/single-service" className="text-gray-600 hover:text-gray-800 text-lg">Single Services</a>
+            <a href="/contactus" className="text-gray-600 hover:text-gray-800 text-lg">Contact Us</a>
+            <a href="/aboutus" className="text-gray-600 hover:text-gray-800 text-lg">About Us</a>
           </nav>
         </div>
       </header>

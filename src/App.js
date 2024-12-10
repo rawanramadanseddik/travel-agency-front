@@ -6,8 +6,11 @@ import AvailableTripsPage from './pages/AllInOneTripsPage';
 import CustomizeTripPage from './pages/CustomizableTripPage';
 import BookingFormPage from './pages/BookingFormPage';
 import BookAllInOnePage from './pages/BookAllInOnePage';
+import AboutUsPage from './pages/AboutUsPage';
+import ContactUsPage from './pages/ContactUsPage';
 import logo from './images/logoo.svg';
 import slogan from './images/slog.svg';
+import PublicTransportPage from './pages/PublicTransportPage';
 
 const handleHomeNavigation = () => {
   window.location.href = '/'; // Navigate to the home page
@@ -26,8 +29,11 @@ const App = () => (
           <Route path="/single-service" element={<SingleServicePage />} />
           <Route path="/available-trips" element={<AvailableTripsPage />} />
           <Route path="/customize-trip" element={<CustomizeTripPage />} />
+          <Route path="/public-transport" element={<PublicTransportPage />} />
           <Route path="/bookingform" element={<BookingFormPage />} />
           <Route path="/bookallinone" element={<BookAllInOnePage />} />
+          <Route path="/aboutus" element={<AboutUsPage />} />
+          <Route path="/contactus" element={<ContactUsPage />} />
         </Routes>
       </div>
 

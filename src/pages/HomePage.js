@@ -111,9 +111,9 @@ const HomePage = () => {
 
             {/* Location Options */}
             <div className="mt-8 space-y-4">
-              <button
+            <button
                 onClick={() => handleButtonClick('/single-service')}
-                className="w-full py-3 text-lg text-white bg-blue-500 rounded-lg hover:bg-blue-600 transition"
+                className="w-full py-3 text-lg text-white bg-blue-500 rounded-lg hover:bg-green-600 transition"
               >
                 Book a single service
               </button>
