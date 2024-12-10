@@ -70,9 +70,27 @@ const HomePage = () => {
             <p className="text-lg">
               We are very excited to be part of your exploration phase. Let's create unforgettable memories together!
             </p>
+          
           </div>
         </div>
       </header>
+      {/* Buttons Section */}
+  <section className="bg-gray-200 py-8 text-center">
+    <div className="space-x-4">
+      <button
+        onClick={() => handleButtonClick('/single-service')}
+        className="py-3 px-6 text-lg text-white bg-blue-500 rounded-lg hover:bg-green-600 transition"
+      >
+        Book a single service
+      </button>
+      <button
+        onClick={() => handleButtonClick('/available-trips')}
+        className="py-3 px-6 text-lg text-white bg-green-500 rounded-lg hover:bg-green-600 transition"
+      >
+        Show the available trips
+      </button>
+    </div>
+  </section>
 
       {/* Locations Grid */}
       <section className="py-12 bg-gray-200">
@@ -111,18 +129,7 @@ const HomePage = () => {
 
             {/* Location Options */}
             <div className="mt-8 space-y-4">
-              <button
-                onClick={() => handleButtonClick('/single-service')}
-                className="w-full py-3 text-lg text-white bg-blue-500 rounded-lg hover:bg-blue-600 transition"
-              >
-                Book a single service
-              </button>
-              <button
-                onClick={() => handleButtonClick('/available-trips')}
-                className="w-full py-3 text-lg text-white bg-green-500 rounded-lg hover:bg-green-600 transition"
-              >
-                Show the available trips
-              </button>
+           
               <button
                 onClick={() => handleButtonClick('/customize-trip')}
                 className="w-full py-3 text-lg text-white bg-yellow-500 rounded-lg hover:bg-yellow-600 transition"

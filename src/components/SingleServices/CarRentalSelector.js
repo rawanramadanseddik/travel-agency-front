@@ -139,14 +139,12 @@ const CarRentalSelector = () => {
       </div>
    
     {/* Search Button */}
-<div className="flex justify-center mt-4 w-full">
-  <button
+    <button
     onClick={handleSearch}
-    className="bg-pink-500 text-white font-bold px-4 py-2 rounded-lg hover:bg-pink-600 w-full"
+    className="w-full bg-pink-500 text-white font-bold text-lg px-6 py-3 rounded-full hover:bg-pink-600 flex justify-center items-center gap-2"
   >
-    Search Transport
+    Search Cars
   </button>
-</div>
 
 {/* Search Results */}
 {searchResults.length > 0 ? (
