@@ -1,40 +1,62 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import CustomizableTripPage from './pages/CustomizableTripPage';
-import SingleServicesPage from './pages/SingleServicesPage';
-import PublicTransportPage from './pages/PublicTransportPage';
-import HomePage from './pages/HomePage'; // Assuming you have a HomePage component
-import AllInOneTripPage from './components/AllInOneTripService/AllInOneTripPage';
+import HomePage from './pages/HomePage';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import SingleServicePage from './pages/SingleServicesPage';
+import AvailableTripsPage from './pages/AllInOneTripsPage';
+import CustomizeTripPage from './pages/CustomizableTripPage';
 import BookingFormPage from './pages/BookingFormPage';
-const App = () => {
-  return (
-    <Router>
-      <div className="App">
-        {/* Navigation Bar */}
-        <nav className="space-x-6 bg-gray-100 p-4">
-          <Link to="/" className="text-gray-600 hover:text-gray-800 text-lg">Home</Link>
-          <Link to="/single-services" className="text-gray-600 hover:text-gray-800 text-lg">Single Services</Link>
-          <Link to="/public-transport" className="text-gray-600 hover:text-gray-800 text-lg">Public Transportation</Link>
-          <Link to="/all-in-one-trip" className="text-gray-600 hover:text-gray-800 text-lg">All-in-One Trip</Link> {/* Added All-in-One Trip link */}
-          <Link to="/customizable-trip" className="text-gray-600 hover:text-gray-800 text-lg">Customize Trip</Link> {/* Added Customize Trip */}
-          <Link to="/contact" className="text-gray-600 hover:text-gray-800 text-lg">Contact</Link>
-        </nav>
+import BookAllInOnePage from './pages/BookAllInOnePage';
+import logo from './images/logoo.svg';
+import slogan from './images/slog.svg';
 
-        {/* Main Routes */}
-        <div className="container mx-auto p-4">
-          <Routes>
-            <Route path="/all-in-one-trip" element={<AllInOneTripPage />} />
-            <Route path="/booking-form" element={<BookingFormPage />} />
-            <Route path="/" element={<HomePage />} /> {/* HomePage route */}
-            <Route path="/single-services" element={<SingleServicesPage />} />
-            <Route path="/public-transport" element={<PublicTransportPage />} />
-            <Route path="/customizable-trip" element={<CustomizableTripPage />} /> {/* Customizable Trip route */}
-            {/* Add additional routes if necessary */}
-          </Routes>
-        </div>
-      </div>
-    </Router>
-  );
+const handleHomeNavigation = () => {
+  window.location.href = '/'; // Navigate to the home page
 };
+
+
+
+const App = () => (
+  
+  <Router>
+    <div className="flex flex-col h-screen">
+      {/* Main Content */}
+      <div className="flex-grow">
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/single-service" element={<SingleServicePage />} />
+          <Route path="/available-trips" element={<AvailableTripsPage />} />
+          <Route path="/customize-trip" element={<CustomizeTripPage />} />
+          <Route path="/bookingform" element={<BookingFormPage />} />
+          <Route path="/bookallinone" element={<BookAllInOnePage />} />
+        </Routes>
+      </div>
+
+      
+       {/* Footer */}
+       <footer className="bg-gray-800 text-white py-4">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+          <div
+            className="flex items-center space-x-4 cursor-pointer"
+            onClick={handleHomeNavigation}
+          >
+            <img src={logo} alt="Logo" className="w-40 h-40" />
+            <img src={slogan} alt="Slogan" className="h-20" />
+          </div>
+
+          <div className="flex space-x-6">
+            <a href="/contactus" className="hover:text-gray-400">Contact Us</a>
+            <a href="/aboutus" className="hover:text-gray-400">About Us</a>
+          </div>
+        </div>
+        
+      </footer>
+      <footer className="bg-gray-200 p-4 text-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <p>&copy; 2024 Your Company. All rights reserved.</p>
+        </div>
+      </footer>
+    </div>
+  </Router>
+);
 
 export default App;
