@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
 import logo from '../images/logoo.svg';
 import slogan from '../images/slog.svg';
 
@@ -11,10 +12,19 @@ const SignUp = () => {
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
 
+  const navigate = useNavigate(); // Initialize useNavigate
+
   // Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
+
+    // Navigate based on role before making API request
+    if (role === 'user') {
+      navigate('/'); // Navigate to Home Page
+    } else if (role === 'admin') {
+      navigate('/admin'); // Navigate to Admin Page
+    }
+
     try {
       const response = await axios.post('/api/users/signup', {
         name,
@@ -22,7 +32,7 @@ const SignUp = () => {
         password,
         role,
       });
-      
+
       setSuccess(response.data.message); // Show success message
       setError(''); // Clear any previous errors
     } catch (error) {
@@ -30,6 +40,7 @@ const SignUp = () => {
       setSuccess(''); // Clear success message
     }
   };
+
   const handleHomeNavigation = () => {
     window.location.href = '/'; // Navigate to the home page
   };

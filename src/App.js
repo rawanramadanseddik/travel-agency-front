@@ -13,6 +13,7 @@ import SignUp from './pages/SignUp';
 import logo from './images/logoo.svg';
 import slogan from './images/slog.svg';
 import PublicTransportPage from './pages/PublicTransportPage';
+import AdminPage from './pages/AdminPage';
 
 const handleHomeNavigation = () => {
   window.location.href = '/'; // Navigate to the home page
@@ -38,6 +39,7 @@ const App = () => (
           <Route path="/feedback" element={<FeedbackPage />} />
           <Route path="/aboutus" element={<AboutUsPage />} />
           <Route path="/contactus" element={<ContactUsPage />} />
+          <Route path="/admin" element={<AdminPage />} />
         </Routes>
       </div>
 
